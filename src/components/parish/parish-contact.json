@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_parish_parish_contacts",
+  "info": {
+    "displayName": "Parish Contact"
+  },
+  "options": {},
+  "attributes": {
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "map_embed": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

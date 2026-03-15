@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cleanings",
+  "info": {
+    "singularName": "cleaning",
+    "pluralName": "cleanings",
+    "displayName": "Cleaning"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "family1": {
+      "type": "string",
+      "required": true
+    },
+    "family2": {
+      "type": "string",
+      "required": false
+    },
+    "date1": {
+      "type": "date",
+      "required": true
+    },
+    "date2": {
+      "type": "date",
+      "required": false
+    },
+    "order": {
+      "type": "integer",
+      "required": true
+    },
+    "active_from": {
+      "type": "date",
+      "required": false
+    }
+  }
+}

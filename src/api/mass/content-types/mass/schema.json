@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "masses",
+  "info": {
+    "singularName": "mass",
+    "pluralName": "masses",
+    "displayName": "Liturgie"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "time": {
+      "type": "time",
+      "required": false
+    },
+    "location": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Hanusovce",
+        "Bystre"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "intention": {
+      "type": "text"
+    },
+    "priest": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "seo": {
+      "type": "component",
+      "component": "default.seo",
+      "repeatable": false
+    },
+    "weekday": {
+      "type": "enumeration",
+      "enum": [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday"
+      ]
+    },
+    "parish": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Hanusovce",
+        "Bystre"
+      ]
+    }
+  }
+}

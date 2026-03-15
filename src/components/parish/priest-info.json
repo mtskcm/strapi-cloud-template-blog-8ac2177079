@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_parish_priest_infos",
+  "info": {
+    "displayName": "Priest Info"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "blocks"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Teologické texty"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true,
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
+    },
+    "content": {
+      "type": "blocks",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "teologicke-texty",
+        "sviatky-svätych",
+        "marianske-sviatky",
+        "panove-sviatky",
+        "rozne"
+      ],
+      "default": "teologicke-texty",
+      "required": true,
+      "pluginOptions": {
+        "i18n": { "localized": false }
+      }
+    },
+    "published_date": {
+      "type": "date",
+      "required": true,
+      "pluginOptions": {
+        "i18n": { "localized": false }
+      }
+    },
+    "seo": {
+      "type": "component",
+      "component": "default.seo",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
+    }
+  }
+}
