@@ -1,0 +1,65 @@
+import type { Schema, Struct } from '@strapi/strapi';
+
+export interface DefaultSeo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_seos';
+  info: {
+    displayName: 'Seo';
+  };
+  attributes: {
+    indexable: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    keywords: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    meta_description: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    meta_image: Schema.Attribute.Media<'images'>;
+    meta_title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+  };
+}
+
+export interface ParishParishContact extends Struct.ComponentSchema {
+  collectionName: 'components_parish_parish_contacts';
+  info: {
+    displayName: 'Parish Contact';
+  };
+  attributes: {
+    address: Schema.Attribute.Text;
+    email: Schema.Attribute.String;
+    map_embed: Schema.Attribute.Text;
+    phone: Schema.Attribute.String;
+  };
+}
+
+export interface ParishPriestInfo extends Struct.ComponentSchema {
+  collectionName: 'components_parish_priest_infos';
+  info: {
+    displayName: 'Priest Info';
+  };
+  attributes: {
+    bio: Schema.Attribute.Blocks;
+    name: Schema.Attribute.String;
+    photo: Schema.Attribute.Media<'images'>;
+  };
+}
+
+declare module '@strapi/strapi' {
+  export module Public {
+    export interface ComponentSchemas {
+      'default.seo': DefaultSeo;
+      'parish.parish-contact': ParishParishContact;
+      'parish.priest-info': ParishPriestInfo;
+    }
+  }
+}

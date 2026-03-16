@@ -1,7 +1,7 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
 export interface DefaultSeo extends Struct.ComponentSchema {
-  collectionName: 'components_shared_seos';
+  collectionName: 'components_default_seos';
   info: {
     displayName: 'Seo';
   };
