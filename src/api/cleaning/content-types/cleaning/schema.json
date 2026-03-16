@@ -4,7 +4,7 @@
   "info": {
     "singularName": "cleaning",
     "pluralName": "cleanings",
-    "displayName": "Cleaning"
+    "displayName": "Upratovanie"
   },
   "options": {
     "draftAndPublish": true
