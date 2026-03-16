@@ -9,32 +9,18 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
   "attributes": {
     "title": {
       "type": "string",
-      "required": true,
-      "pluginOptions": {
-        "i18n": { "localized": true }
-      }
+      "required": true
     },
     "slug": {
       "type": "uid",
       "targetField": "title",
-      "required": true,
-      "pluginOptions": {
-        "i18n": { "localized": true }
-      }
+      "required": true
     },
     "content": {
-      "type": "blocks",
-      "pluginOptions": {
-        "i18n": { "localized": true }
-      }
+      "type": "blocks"
     },
     "category": {
       "type": "enumeration",
@@ -46,25 +32,11 @@
         "rozne"
       ],
       "default": "teologicke-texty",
-      "required": true,
-      "pluginOptions": {
-        "i18n": { "localized": false }
-      }
+      "required": true
     },
     "published_date": {
       "type": "date",
-      "required": true,
-      "pluginOptions": {
-        "i18n": { "localized": false }
-      }
-    },
-    "seo": {
-      "type": "component",
-      "component": "default.seo",
-      "repeatable": false,
-      "pluginOptions": {
-        "i18n": { "localized": true }
-      }
+      "required": true
     }
   }
 }
